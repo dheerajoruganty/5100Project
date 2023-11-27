@@ -1,0 +1,32 @@
+Occupation,"Employment change, 2022-32","Employment, 2022","Employment, 2032",Median annual wage 2022,"Percent employment change, 2022-32",Percent women 2022,"Total Employment, 2022",Percent non-women 2022,"Men employment, 2022",STEM,Industry_SOCmajor
+Accountants and auditors,67.4,1538.4,1605.8,78000.0,4.4,0.587865715,2616.9241728955058,0.41213428500000004,1078.5241728955057,no,Financial Specialists
+Animal caretakers,52.5,339.0,391.5,29530.0,15.5,0.759193919,446.52623198895776,0.240806081,107.52623198895776,no,Other
+Computer and information systems managers,86.0,557.4,643.3,164070.0,15.4,0.276658568,2014.7577717527981,0.723341432,1457.3577717527983,yes,Management Occupations
+Computer systems analysts,51.1,531.4,582.6,102240.0,9.6,0.401743494,1322.7345506185097,0.598256506,791.3345506185098,yes,Computer and Mathematical Occupations
+Construction laborers,61.9,1418.6,1480.5,40750.0,4.4,0.039457,35953.062827888585,0.960543,34534.46282788859,no,Construction and Extraction Occupations
+"Cooks, restaurant",277.6,1361.2,1638.9,34110.0,20.4,0.411026844,3311.7058407990503,0.588973156,1950.5058407990502,no,Food Preparation and Serving Related Occupations
+Data scientists,59.4,168.9,228.2,103500.0,35.2,,,,,yes,Computer and Mathematical Occupations
+Financial managers,126.6,792.6,919.2,139790.0,16.0,0.553252746,1432.6182847359967,0.44674725400000004,640.0182847359966,no,Management Occupations
+First-line supervisors of food preparation and serving workers,60.0,1221.7,1281.8,37050.0,4.9,0.60735896,2011.4958047214782,0.39264104,789.7958047214781,no,Food Preparation and Serving Related Occupations
+General and operations managers,147.3,3507.8,3655.1,98100.0,4.2,0.352885247,9940.341881166825,0.647114753,6432.541881166825,no,Management Occupations
+Heavy and tractor-trailer truck drivers,89.3,2192.3,2281.5,49920.0,4.1,,,,,no,Transportation and Material Moving Occupations
+Home health and personal care aides,804.6,3715.5,4520.1,30180.0,21.7,0.831,4471.119133574008,0.16900000000000004,755.6191335740077,no,Other
+Human resources specialists,51.4,874.5,925.9,64240.0,5.9,0.748861939,1167.7719943515517,0.251138061,293.2719943515517,no,Business and Financial Operations Occupations
+Industrial machinery mechanics,59.9,402.2,462.1,59830.0,14.9,,,,,no,"Installation, Maintenance, and Repair Occupations"
+Information security analysts,53.2,168.9,222.2,112000.0,31.5,0.165695939,1019.3369917170995,0.834304061,850.4369917170995,yes,Computer and Mathematical Occupations
+"Laborers and freight, stock, and material movers, hand",158.8,2988.5,3147.3,36110.0,5.3,0.235782726,12674.80468437709,0.764217274,9686.30468437709,no,Transportation and Material Moving Occupations
+Lawyers,62.4,826.3,888.7,135740.0,7.5,0.387890046,2130.2428575339104,0.612109954,1303.9428575339105,no,Legal Occupations
+Light truck drivers,133.8,1164.6,1298.4,40410.0,11.5,,,,,no,Transportation and Material Moving Occupations
+"Maintenance and repair workers, general",57.2,1607.2,1664.4,44980.0,3.6,0.04213619,38142.98350183062,0.95786381,36535.78350183062,no,"Installation, Maintenance, and Repair Occupations"
+Management analysts,95.7,987.6,1083.3,95290.0,9.7,0.443356273,2227.5539112536703,0.556643727,1239.9539112536704,no,Business and Financial Operations Occupations
+Market research analysts and marketing specialists,116.6,868.6,985.2,68230.0,13.4,0.600331212,1446.8679666117378,0.39966878800000005,578.2679666117377,no,Business and Financial Operations Occupations
+Medical and health services managers,144.7,509.5,654.2,104830.0,28.4,0.729933251,698.0090293215044,0.27006674900000005,188.50902932150439,yes,Management Occupations
+Medical assistants,105.9,764.4,870.2,38270.0,13.9,0.911472178,838.6432613634861,0.08852782199999998,74.24326136348611,no,Healthcare Support Occupations
+Nurse practitioners,118.6,266.3,384.9,121610.0,44.5,0.884045693,301.2287737032163,0.11595430699999998,34.92877370321628,yes,Healthcare Practitioners and Technical Occupations
+Nursing assistants,56.5,1361.3,1417.8,35760.0,4.1,0.881499873,1544.2997119978031,0.11850012700000001,182.99971199780316,no,Healthcare Support Occupations
+Project management specialists,54.7,881.3,936.0,95370.0,6.2,0.462735502,1904.5437321988747,0.537264498,1023.2437321988748,no,Business and Financial Operations Occupations
+Registered nurses,177.4,3172.5,3349.9,81220.0,5.6,0.875218002,3624.811181614612,0.124781998,452.311181614612,yes,Healthcare Practitioners and Technical Occupations
+Software developers,410.4,1594.5,2004.9,127260.0,25.7,0.184637379,8635.846157673199,0.815362621,7041.346157673199,yes,Computer and Mathematical Occupations
+Stockers and order fillers,178.6,2851.6,3030.3,34220.0,6.3,0.366036836,7790.472759960148,0.6339631640000001,4938.872759960148,no,Transportation and Material Moving Occupations
+"Substance abuse, behavioral disorder, and mental health counselors",71.5,388.2,459.6,49710.0,18.4,0.727726408,533.4422328672729,0.272273592,145.2422328672729,no,Community and Social Service Occupations
+"Total, all occupations",4665.5,164482.6,169148.1,46310.0,2.8,0.473,347743.3403805497,0.527,183260.74038054972,no,Other

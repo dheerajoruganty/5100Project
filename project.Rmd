@@ -1,0 +1,190 @@
+---
+title: "women_employment"
+output: html_document
+date: "2023-11-26"
+---
+
+read in output_data_v2.csv
+
+```{r}
+women <- read.csv('output_data_v2.csv')
+
+print(colnames(women))
+
+```
+
+STEM vs. non-STEM  
+- compare wage  
+- compare employment  
+
+Computer vs. non-Computer  
+- compare wage  
+- compare employment  
+
+Industry SOC major groups classification  
+- https://www.bls.gov/soc/2018/major_groups.htm  
+
+Employment STEM classification  
+- https://www.bls.gov/soc/Attachment_C_STEM_2018.pdf  
+
+Compare top three industries/SOC majors  
+
+https://www.bls.gov/spotlight/2017/science-technology-engineering-and-mathematics-stem-occupations-past-present-and-future/home.htm
+
+```{r}
+
+stem_t <- na.omit(women)
+women_clean <- na.omit(women)
+
+notstem <- subset(stem_t, select=Percent.women.2022,
+                      subset=STEM=="no", drop=T)
+
+stem  <- subset(stem_t, select=Percent.women.2022,
+                      subset=STEM=="yes", drop=T)
+
+t.test(notstem, stem,alt="greater")
+
+dist_stem <- women_clean$Percent.women.2022[women_clean$STEM == "yes"]
+print(dist_stem)
+hist(dist_stem)
+
+dist_nostem <- women_clean$Percent.women.2022[women_clean$STEM == "no"]
+print(dist_nostem)
+hist(dist_nostem)
+```
+
+Bootsrap percent women STEM vs. Non-Stem
+
+```{r}
+
+
+
+stem_boot <- women_clean[women_clean$STEM == "yes", ]
+nostem_boot <- women_clean[women_clean$STEM == "no", ]
+N <- 100000
+
+ratiomeans<- numeric(N)
+
+for (i in 1:N)
+{
+  stem_sample <- sample(women_clean$Percent.women.2022[women_clean$STEM == 'yes'], length(stem_boot), replace = TRUE)
+  nostem_sample <- sample(women_clean$Percent.women.2022[women_clean$STEM == 'no'], length(nostem_boot), replace = TRUE)
+  ratiomeans[i] <- mean(stem_sample)/mean(nostem_sample)
+}
+
+quantile(ratiomeans, c(0.025, 0.975))
+
+hist(ratiomeans)
+
+stem_mean <- mean(women_clean$Percent.women.2022[women_clean$STEM == 'yes'])
+nostem_mean <- mean(women_clean$Percent.women.2022[women_clean$STEM == 'no'])
+ratio_actual <- stem_mean/nostem_mean
+(bias= mean(ratiomeans)-mean(ratio_actual)) #estimated bias
+
+
+```
+
+
+
+```{r}
+stem_wage <- subset(women, select=Median.annual.wage.2022,
+                      subset=STEM=="yes", drop=T)
+
+nostem_wage <- subset(women, select=Median.annual.wage.2022,
+                      subset=STEM=="no", drop=T)
+
+t.test(stem_wage, nostem_wage, alt="greater")
+
+```
+
+
+
+```{r}
+
+notcomputer <- subset(women, select=Percent.women.2022,
+                      subset=Industry_SOCmajor!="Computer and Mathematical Occupations", drop=T)
+
+computer <- subset(women, select=Percent.women.2022,
+                      subset=Industry_SOCmajor=="Computer and Mathematical Occupations", drop=T)
+
+
+t.test(notcomputer, computer, alt="greater")
+
+```
+
+```{r}
+
+computer_wage <- subset(women, select=Median.annual.wage.2022,
+                      subset=Industry_SOCmajor=="Computer and Mathematical Occupations", drop=T)
+
+notcomputer_wage <- subset(women, select=Median.annual.wage.2022,
+                      subset=Industry_SOCmajor!="Computer and Mathematical Occupations", drop=T)
+
+t.test(computer_wage, notcomputer_wage, alt="greater")
+```
+
+Management Occupations
+Legal Occupations
+Computer and Mathematical Occupations
+Healthcare Practitioners and Technical Occupations
+
+employment men, employment women
+
+```{r}
+library(kableExtra)
+library(dplyr)
+library(tidyr)
+topemployment <- women[(women$Industry_SOCmajor=="Management Occupations" |
+                           women$Industry_SOCmajor=="Legal Occupations" |
+                           women$Industry_SOCmajor=="Computer and Mathematical Occupations" |
+                           women$Industry_SOCmajor=="Healthcare Practitioners and Technical Occupations"),]
+
+#remove rows with NA
+topemployment <- na.omit(topemployment)
+topemployment_women <- topemployment[, c('Industry_SOCmajor', 'Employment..2022', 'Men.employment..2022')]
+
+
+topemployment <- topemployment %>%
+  group_by(Industry_SOCmajor) %>%
+  summarise(women_employment = sum(Employment..2022), men_employment = sum(Men.employment..2022))
+
+topemployment[, sapply(topemployment, is.numeric)] <- round(topemployment[, sapply(topemployment, is.numeric)], 0)
+
+topemployment
+
+topemployment <- topemployment[, c("women_employment", "men_employment")]
+
+chisq.test(topemployment)
+
+
+```
+
+Top 4 Earning Employment Stem vs. Non-stem
+
+
+```{r}
+
+library(dplyr)
+library(tidyr)
+
+
+stem_chi <- women[, c('STEM', 'Employment..2022', 'Men.employment..2022')]
+
+#remove rows with NA
+stem_chi <- na.omit(stem_chi)
+
+stem_chi <- stem_chi %>%
+  group_by(STEM) %>%
+  summarise(women_employment = sum(Employment..2022), men_employment = sum(Men.employment..2022))
+
+stem_chi[, sapply(stem_chi, is.numeric)] <- round(stem_chi[, sapply(stem_chi, is.numeric)], 0)
+
+stem_chi
+
+stem_chi <- stem_chi[, c("women_employment", "men_employment")]
+
+chisq.test(stem_chi)
+
+
+```
+

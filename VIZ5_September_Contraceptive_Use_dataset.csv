@@ -1,0 +1,593 @@
+Continent,Sub-Continent,Country,Percentage distribution of women aged 15-49  (per country),Pregnancy intention,Contraceptive availability,Contraceptive method
+Africa,Eastern Africa,Burundi,0.650837821966518,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Burundi,0.113709303450489,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Burundi,2.43467777792835e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Burundi,0.211106096803709,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Comoros,0.666126226720115,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Comoros,9.50685632979558e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Comoros,3.81693114384136e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Comoros,0.200635898543516,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Djibouti,0.657093774664966,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Djibouti,0.161502279869941,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Djibouti,1.14711675244917e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Djibouti,0.169932777940601,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Eritrea,0.703098353744449,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Eritrea,5.8524804703874e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Eritrea,1.06721344220529e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Eritrea,0.227704707129624,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Ethiopia,0.62460198593714,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Ethiopia,0.233723052550546,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Ethiopia,2.81550186099756e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Ethiopia,0.138859459651317,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Kenya,0.399470012587183,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Kenya,0.453089260492989,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Kenya,2.6354293019592e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Kenya,0.121086433900237,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Madagascar,0.549761116902681,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Madagascar,0.209587165580986,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Madagascar,8.11424064506275e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Madagascar,0.159509311065706,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Malawi,0.380557727357012,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Malawi,0.438960843171099,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Malawi,7.53070762982856e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Malawi,0.172950721842061,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Mauritius,0.529736438810261,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Mauritius,0.269685994480879,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Mauritius,2.66877872713546e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Mauritius,0.173889779437506,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Mozambique,0.62266455836768,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Mozambique,0.122835256703236,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Mozambique,2.39583974434687e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Mozambique,0.252104345184739,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Reunion,0.599209217801216,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Reunion,0.230015270533544,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Reunion,2.82037360335986e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Reunion,0.142571775631642,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Rwanda,0.558864791674383,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Rwanda,0.272659139833355,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Rwanda,3.01031676329336e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Rwanda,0.138372900859328,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Somalia,0.660609692477665,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Somalia,0.115193867856722,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Somalia,5.19858287735403e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Somalia,0.218997856788261,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,South Sudan,0.748050408875055,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,South Sudan,1.90119921718288e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,South Sudan,1.71020306920134e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,South Sudan,0.215835568261096,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Tanzania,0.491785342104313,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Tanzania,0.268911747158106,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Tanzania,5.2145391420109e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Tanzania,0.187157519317471,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Uganda,0.485466004029824,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Uganda,0.250104361655127,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Uganda,2.69387495797625e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Uganda,0.237490884735286,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Zambia,0.473270818965032,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Zambia,0.311926990073054,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Zambia,2.5005107122617e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Zambia,0.189797083839296,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Eastern Africa,Zimbabwe,0.421081098273868,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Eastern Africa,Zimbabwe,0.481725608763631,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Eastern Africa,Zimbabwe,6.64342604460502e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Eastern Africa,Zimbabwe,9.05498669178962e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Angola,0.564898443539629,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Angola,0.128064748205239,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Angola,0.04566394797634,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Angola,0.261372860278792,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Cameroon,0.500034745889496,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Cameroon,0.240474580693129,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Cameroon,0.115876487407097,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Cameroon,0.143614186010277,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Central African Republic,0.593501985603888,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Central African Republic,0.11213655552743,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Central African Republic,3.20514299012848e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Central African Republic,0.262310028967397,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Chad,0.760538900169946,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Chad,4.86869223990697e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Chad,5.03424670115707e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Chad,0.185739930729826,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Congo,0.567964886120218,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Congo,0.178539668169484,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Congo,0.103926610189534,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Congo,0.149568835520764,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Democratic Republic of the Congo,0.575877047306843,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Democratic Republic of the Congo,8.10296613173291e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Democratic Republic of the Congo,0.108382866259867,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Democratic Republic of the Congo,0.234710425115961,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Equatorial Guinea,0.604658523317105,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Equatorial Guinea,0.108493752590844,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Equatorial Guinea,2.77071819964569e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Equatorial Guinea,0.259097358020036,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Gabon,0.431932188679898,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Gabon,0.239883074239716,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Gabon,9.71979655790883e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Gabon,0.230986771501296,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Middle Africa,Sao Tome and Principe,0.364816813854234,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Middle Africa,Sao Tome and Principe,0.321310291115719,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Middle Africa,Sao Tome and Principe,2.53506556084341e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Middle Africa,Sao Tome and Principe,0.288522239421613,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Southern Africa,Botswana,0.349988979920004,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Southern Africa,Botswana,0.508397630181115,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Southern Africa,Botswana,4.56732029728477e-04,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Southern Africa,Botswana,0.141156657869152,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Southern Africa,Lesotho,0.357875267134308,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Southern Africa,Lesotho,0.488875827086732,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Southern Africa,Lesotho,3.38830292500935e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Southern Africa,Lesotho,0.149860602853951,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Southern Africa,Namibia,0.357956151831074,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Southern Africa,Namibia,0.503535188550316,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Southern Africa,Namibia,4.45106600596511e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Southern Africa,Namibia,0.134057593612645,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Southern Africa,South Africa,0.350046144982598,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Southern Africa,South Africa,0.50804075982621,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Southern Africa,South Africa,9.40340783463601e-05,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Southern Africa,South Africa,0.141819061112846,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Southern Africa,Swaziland,0.356077572438121,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Southern Africa,Swaziland,0.52882955973345,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Southern Africa,Swaziland,2.7831317246523e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Southern Africa,Swaziland,0.112309736103775,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Benin,0.513698797933125,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Benin,0.133255896415431,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Benin,7.66352206579617e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Benin,0.276410084993482,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Burkina Faso,0.535802881421669,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Burkina Faso,0.171124444061107,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Burkina Faso,4.75593397177102e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Burkina Faso,0.288316740545453,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Cape Verde,0.481071197200135,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Cape Verde,0.339516231356144,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Cape Verde,4.13901748605197e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Cape Verde,0.138022396583201,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,"Côte d'Ivoire",0.543726864733006,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,"Côte d'Ivoire",0.139082603789332,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,"Côte d'Ivoire",5.77939430673573e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,"Côte d'Ivoire",0.259396588410305,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Gambia,0.767790367775332,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Gambia,6.67582569683838e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Gambia,5.59884908623331e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Gambia,0.15985252617005,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Ghana,0.516791877089955,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Ghana,0.223135907784342,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Ghana,5.21801435061902e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Ghana,0.207892071619513,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Guinea,0.692158535690471,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Guinea,7.7274822550182e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Guinea,1.58633826997907e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Guinea,0.214703259059558,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Guinea-Bissau,0.527368175266243,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Guinea-Bissau,0.251946417290488,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Guinea-Bissau,2.26096823634035e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Guinea-Bissau,0.198075725079865,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Liberia,0.470013093576847,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Liberia,0.205784758159626,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Liberia,1.21585420446175e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Liberia,0.312043606218912,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Mali,0.752809144998671,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Mali,0.13189289039569,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Mali,4.82964417104754e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Mali,0.110468320434591,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Mauritania,0.679623422443572,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Mauritania,8.65780836072487e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Mauritania,2.8267437741751e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Mauritania,0.205531056207429,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Niger,0.754754448182521,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Niger,9.66575872252904e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Niger,1.34136469433855e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Niger,0.135174317648803,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Nigeria,0.702830444706603,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Nigeria,0.113322726045077,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Nigeria,4.7782004121375e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Nigeria,0.136064825126941,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Senegal,0.660239845531747,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Senegal,0.147215548723617,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Senegal,1.2604966643387e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Senegal,0.179939639101249,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Sierra Leone,0.544569043984634,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Sierra Leone,0.215446794874376,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Sierra Leone,1.20839135367502e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Sierra Leone,0.227900247604242,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Western Africa,Togo,0.526791179803493,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Western Africa,Togo,0.165710015019527,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Western Africa,Togo,2.54827313273435e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Western Africa,Togo,0.282016073849638,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Northern Africa,Algeria,0.622090267801488,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Northern Africa,Algeria,0.267082425401676,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Northern Africa,Algeria,4.25723529520106e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Northern Africa,Algeria,6.82549538448254e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Northern Africa,Egypt,0.544163959468483,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Northern Africa,Egypt,0.360741995599221,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Northern Africa,Egypt,1.0793903025759e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Northern Africa,Egypt,8.43001419065313e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Northern Africa,Libya,0.712241436259547,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Northern Africa,Libya,8.65531967555956e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Northern Africa,Libya,8.59389131518028e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Northern Africa,Libya,0.115266453833054,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Northern Africa,Morocco,0.606795090685221,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Northern Africa,Morocco,0.289813458433487,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Northern Africa,Morocco,4.3464920212129e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Northern Africa,Morocco,5.99265306691639e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Northern Africa,Sudan,0.756078131111029,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Northern Africa,Sudan,0.07306913865895,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Northern Africa,Sudan,3.85385667341889e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Northern Africa,Sudan,0.166998873556602,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Northern Africa,Tunisia,0.623968485232216,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Northern Africa,Tunisia,0.270861201633161,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Northern Africa,Tunisia,6.08516709716486e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Northern Africa,Tunisia,4.43186421629739e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Africa,Northern Africa,Western Sahara,0.472909893822218,Not wanting to avoid pregancy,Not applicable,Not applicable
+Africa,Northern Africa,Western Sahara,0.390491771749589,Wanting to avoid pregnancy,Met need,Using modern methods
+Africa,Northern Africa,Western Sahara,5.99899899766059e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Africa,Northern Africa,Western Sahara,7.66083444515871e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Eastern Asia,China,0.273465596120252,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Eastern Asia,China,0.678683746920545,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Eastern Asia,China,1.40823378358354e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Eastern Asia,China,4.64424231756194e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Eastern Asia,Hong Kong (China),0.503227911338136,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Eastern Asia,Hong Kong (China),0.409833602289491,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Eastern Asia,Hong Kong (China),2.21174385331287e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Eastern Asia,Hong Kong (China),6.48210478392439e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Eastern Asia,Macau,0.416701193845896,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Eastern Asia,Macau,0.525906914351398,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Eastern Asia,Macau,3.30739023140477e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Eastern Asia,Macau,5.4084501571301e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Eastern Asia,North Korea,0.351843870908356,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Eastern Asia,North Korea,0.595427361152155,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Eastern Asia,North Korea,3.63314227765861e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Eastern Asia,North Korea,4.90956256618312e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Eastern Asia,Mongolia,0.438810150086835,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Eastern Asia,Mongolia,0.352332642402659,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Eastern Asia,Mongolia,4.33540313427582e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Eastern Asia,Mongolia,0.165503176167748,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Eastern Asia,South Korea,0.473549382042224,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Eastern Asia,South Korea,0.409903476379744,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Eastern Asia,South Korea,5.48041803925547e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Eastern Asia,South Korea,6.1742961185478e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Central Asia,Kazakhstan,0.548001958270096,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Central Asia,Kazakhstan,0.32979264828586,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Central Asia,Kazakhstan,9.44315850254051e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Central Asia,Kazakhstan,0.112762234941503,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Central Asia,Kyrgyzstan,0.575378483161335,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Central Asia,Kyrgyzstan,0.28056126743243,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Central Asia,Kyrgyzstan,1.33110454447079e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Central Asia,Kyrgyzstan,0.130749203961526,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Central Asia,Tajikistan,0.628639982112746,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Central Asia,Tajikistan,0.188978980304105,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Central Asia,Tajikistan,1.61326801054302e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Central Asia,Tajikistan,0.166248357477716,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Central Asia,Turkmenistan,0.552645074922231,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Central Asia,Turkmenistan,0.314807342124014,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Central Asia,Turkmenistan,2.20873778094486e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Central Asia,Turkmenistan,0.110460205144307,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Central Asia,Uzbekistan,0.438571192481704,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Central Asia,Uzbekistan,0.437862614061122,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Central Asia,Uzbekistan,2.27132343515205e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Central Asia,Uzbekistan,0.100852959105654,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,Afghanistan,0.659740974356223,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,Afghanistan,0.145401277887739,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,Afghanistan,1.9423759617494e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,Afghanistan,0.175433988138543,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,Bangladesh,0.379840518115905,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,Bangladesh,0.450945005065523,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,Bangladesh,7.37367394789056e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,Bangladesh,9.54777373396647e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,Bhutan,0.483101175946525,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,Bhutan,0.427943962823685,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,Bhutan,2.1062746984824e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,Bhutan,8.68485865313078e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,India,0.498121322428116,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,India,0.375171293905063,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,India,3.65577430860257e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,India,9.01496405807954e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,Iran,0.407851460873833,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,Iran,0.403709545920036,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,Iran,0.14582804781577,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,Iran,4.26109453903602e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,Maldives,0.538956268460038,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,Maldives,0.21784976396755,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,Maldives,5.27933541498126e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,Maldives,0.190400613422599,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,Nepal,0.423852349270735,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,Nepal,0.35919798993626,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,Nepal,1.9989156725373e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,Nepal,0.19696050406763,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,Pakistan,0.603412765847023,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,Pakistan,0.192824159503854,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,Pakistan,6.4594529944561e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,Pakistan,0.139168544704563,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southern Asia,Sri Lanka,0.468539224759074,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southern Asia,Sri Lanka,0.369660751437877,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southern Asia,Sri Lanka,0.108284998720023,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southern Asia,Sri Lanka,5.35150250830263e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Brunei Darussalam,0.56525835038599,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Brunei Darussalam,0.309203224350144,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Brunei Darussalam,0.04372090490617,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Brunei Darussalam,8.18175203576967e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Cambodia,0.549653760554064,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Cambodia,0.254785962635978,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Cambodia,0.109997382319515,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Cambodia,8.55628944904436e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Indonesia,0.45586396553479,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Indonesia,0.424145795895847,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Indonesia,1.17663935635035e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Indonesia,0.10822384500586,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Laos,0.512011144895251,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Laos,0.293836289898029,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Laos,0.04650594234906,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Laos,0.14764662285766,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Malaysia,0.547147794363947,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Malaysia,0.221829589114111,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Malaysia,0.112091812339841,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Malaysia,0.118930804182101,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Myanmar,0.613753451158094,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Myanmar,0.283945211426652,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Myanmar,5.70253204386928e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Myanmar,9.65988053713845e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Philippines,0.528675655940278,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Philippines,0.240931438959246,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Philippines,0.111128960141576,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Philippines,0.1192639449589,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Singapore,0.559000418358401,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Singapore,0.311829010589654,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Singapore,4.55797577607789e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Singapore,8.35908132911661e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Thailand,0.475185138799451,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Thailand,0.466302481669351,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Thailand,1.53309948697856e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Thailand,4.31813846614118e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Timor-Leste,0.761477855150206,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Timor-Leste,9.44792314509517e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Timor-Leste,4.72839188396215e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Timor-Leste,0.139314521514878,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Southeast Asia,Viet Nam,0.409293507451636,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Southeast Asia,Viet Nam,0.411170516816946,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Southeast Asia,Viet Nam,0.129632586641507,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Southeast Asia,Viet Nam,4.99033890899107e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Armenia,0.606846949043263,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Armenia,0.157578710159996,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Armenia,0.158235855935637,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Armenia,7.73384848611041e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Azerbaijan,0.563136298897944,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Azerbaijan,9.9191130753551e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Azerbaijan,0.237070134894482,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Azerbaijan,0.100602435454022,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Bahrain,0.632282120579489,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Bahrain,0.198227049716224,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Bahrain,9.62977447844407e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Bahrain,7.31930849198467e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Cyprus,0.602024210242443,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Cyprus,0.214733549921036,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Cyprus,0.104511730508763,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Cyprus,7.8730509327757e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Georgia,0.648289271385011,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Georgia,0.128912139341287,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Georgia,7.48062603543005e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Georgia,0.147992328919401,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Iraq,0.638091193307971,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Iraq,0.2103277481251,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Iraq,9.61311816116681e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Iraq,5.54498769552522e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Israel,0.613410422218514,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Israel,0.208291020193954,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Israel,0.101377016343085,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Israel,7.69215412444469e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Jordan,0.558549561152289,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Jordan,0.254012852057315,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Jordan,0.112518789570151,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Jordan,7.49187972202441e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Kuwait,0.69681013168304,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Kuwait,0.164054033477042,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Kuwait,7.80314831038195e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Kuwait,6.11043517360988e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Lebanon,0.698012079903567,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Lebanon,0.162763421286008,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Lebanon,7.80068934200488e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Lebanon,6.12176053903751e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Oman,0.763389109557141,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Oman,8.56874781855722e-02,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Oman,5.50462298517051e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Oman,9.58771824055814e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Qatar,0.709461258787424,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Qatar,0.197589275217023,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Qatar,1.80519117360336e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Qatar,7.48975542595192e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Saudi Arabia,0.569735830406151,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Saudi Arabia,0.232569631726819,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Saudi Arabia,0.113158661281007,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Saudi Arabia,8.45358765860233e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Palestinian Territories,0.652410341283525,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Palestinian Territories,0.221707222988569,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Palestinian Territories,6.57521083747271e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Palestinian Territories,6.01303273531782e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Syria,0.551023954221201,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Syria,0.294205594080764,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Syria,7.41534850825268e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Syria,8.06169666155004e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Turkey,0.469761551723067,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Turkey,0.292517010906272,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Turkey,0.159840052534659,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Turkey,7.78813848360022e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,United Arab Emirates,0.43230477462605,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,United Arab Emirates,0.310749463434814,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,United Arab Emirates,0.150732801534241,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,United Arab Emirates,0.106212960404894,Wanting to avoid pregnancy,Unmet need,Using no method
+Asia,Western Asia,Yemen,0.640975717144332,Not wanting to avoid pregancy,Not applicable,Not applicable
+Asia,Western Asia,Yemen,0.16773129268208,Wanting to avoid pregnancy,Met need,Using modern methods
+Asia,Western Asia,Yemen,2.52602693694523e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Asia,Western Asia,Yemen,0.166032720804135,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Melanesia,Fiji,0.614803911920256,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Melanesia,Fiji,0.177847203423563,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Melanesia,Fiji,5.7632405124299e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Melanesia,Fiji,0.149716479531882,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Melanesia,New Caledonia,0.756419151292899,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Melanesia,New Caledonia,0.127045704435211,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Melanesia,New Caledonia,4.24522304111132e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Melanesia,New Caledonia,7.4082913860777e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Melanesia,Papua New Guinea,0.598955090947558,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Melanesia,Papua New Guinea,0.172735054009369,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Melanesia,Papua New Guinea,5.92017843671385e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Melanesia,Papua New Guinea,0.169105177579179,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Melanesia,Solomon Islands,0.639417480810465,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Melanesia,Solomon Islands,0.211759040119576,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Melanesia,Solomon Islands,6.23175898758034e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Melanesia,Solomon Islands,8.65058891941553e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Melanesia,Vanuatu,0.445311197170797,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Melanesia,Vanuatu,0.288698888367751,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Melanesia,Vanuatu,8.83772983523349e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Melanesia,Vanuatu,0.177753700713766,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Micronesia,Guam,0.680578170479635,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Micronesia,Guam,0.153574928451917,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Micronesia,Guam,5.02802916867374e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Micronesia,Guam,0.11556660938171,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Micronesia,Federated States of Micronesia,0.682407459662842,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Micronesia,Federated States of Micronesia,0.150298213307114,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Micronesia,Federated States of Micronesia,0.05002416486164,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Micronesia,Federated States of Micronesia,0.117270162168405,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Polynesia,French Polynesia,0.760404336758419,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Polynesia,French Polynesia,0.124864945647091,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Polynesia,French Polynesia,4.18511882375809e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Polynesia,French Polynesia,7.28795293569093e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Polynesia,Samoa,0.643755599290189,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Polynesia,Samoa,0.138983464781942,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Polynesia,Samoa,1.52868228107482e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Polynesia,Samoa,0.201949764898543,Wanting to avoid pregnancy,Unmet need,Using no method
+Oceania,Polynesia,Tonga,0.661236843684458,Not wanting to avoid pregancy,Not applicable,Not applicable
+Oceania,Polynesia,Tonga,0.173123413960892,Wanting to avoid pregnancy,Met need,Using modern methods
+Oceania,Polynesia,Tonga,4.01198832367225e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Oceania,Polynesia,Tonga,0.125463188122968,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Bahamas,0.433657966835467,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Bahamas,0.394735133354884,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Bahamas,1.68526374284936e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Bahamas,0.154754262381155,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Barbados,0.453745430663902,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Barbados,0.350196775890377,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Barbados,5.25674381112112e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Barbados,0.14349035533451,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Cuba,0.210608861775312,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Cuba,0.696030849576975,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Cuba,1.20196739388747e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Cuba,8.13406147088372e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Dominican Republic,0.327507975363514,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Dominican Republic,0.538293590741293,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Dominican Republic,1.21116887059333e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Dominican Republic,0.12208674518926,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Guadeloupe,0.436985624767792,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Guadeloupe,0.398153827852299,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Guadeloupe,1.78529913134272e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Guadeloupe,0.147007556066482,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Haiti,0.479089485574782,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Haiti,0.223716712897653,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Haiti,2.22006403494425e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Haiti,0.274993161178121,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Jamaica,0.395711227261377,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Jamaica,0.455014673711329,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Jamaica,2.23312736806232e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Jamaica,0.126942825346672,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Martinique,0.444323900983907,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Martinique,0.39000325955545,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Martinique,1.71824733302567e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Martinique,0.148490366130386,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Puerto Rico,0.385802850773002,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Puerto Rico,0.439492120659244,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Puerto Rico,1.81598085322817e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Puerto Rico,0.156545220035472,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Saint Lucia,0.414104274775773,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Saint Lucia,0.406687758583056,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Saint Lucia,2.01787355664083e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Saint Lucia,0.159029231074763,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,St. Vincent & the Grenadines,0.391115307641918,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,St. Vincent & the Grenadines,0.425312280791094,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,St. Vincent & the Grenadines,1.76707281670328e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,St. Vincent & the Grenadines,0.165901683399955,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Trinidad and Tobago,0.355679229979163,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Trinidad and Tobago,0.285067445643261,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Trinidad and Tobago,4.16818932795319e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Trinidad and Tobago,0.317571431098045,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Caribbean,Virgin Islands,0.407437595653504,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Caribbean,Virgin Islands,0.42349292120938,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Caribbean,Virgin Islands,1.64380977418274e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Caribbean,Virgin Islands,0.152631385395289,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Central America,Belize,0.43065917766663,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Central America,Belize,0.34996548073972,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Central America,Belize,2.02400287898126e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Central America,Belize,0.199135312803837,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Central America,Costa Rica,0.339838162193616,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Central America,Costa Rica,0.551514650463479,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Central America,Costa Rica,8.38529571264971e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Central America,Costa Rica,0.100261891630255,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Central America,El Salvador,0.367601042321964,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Central America,El Salvador,0.496119398855887,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Central America,El Salvador,2.68858354297059e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Central America,El Salvador,0.109393723392443,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Central America,Guatemala,0.506208234768502,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Central America,Guatemala,0.322232885937245,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Central America,Guatemala,7.09071877017271e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Central America,Guatemala,0.100651691592525,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Central America,Honduras,0.407972107710445,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Central America,Honduras,0.438655429363444,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Central America,Honduras,5.99988099415972e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Central America,Honduras,9.33736529845142e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Central America,Mexico,0.36968069805601,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Central America,Mexico,0.488120466527515,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Central America,Mexico,1.47584660015576e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Central America,Mexico,0.127440369414918,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Central America,Nicaragua,0.368722591952448,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Central America,Nicaragua,0.553133278781041,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Central America,Nicaragua,2.26990637710258e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Central America,Nicaragua,5.54450654954855e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,Central America,Panama,0.365686759913274,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,Central America,Panama,0.463780927427154,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,Central America,Panama,1.89309921245514e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,Central America,Panama,0.15160132053502,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Argentina,0.315043356985296,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Argentina,0.547527006055729,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Argentina,4.76637763951956e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Argentina,8.97658605637791e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Bolivia,0.485423508379978,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Bolivia,0.216649397372684,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Bolivia,0.158968483345337,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Bolivia,0.138958610902002,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Brazil,0.289137732572329,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Brazil,0.604470357950863,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Brazil,2.50204875476512e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Brazil,8.13714219291564e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Chile,0.468449037315061,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Chile,0.354764472091404,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Chile,2.41493668838155e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Chile,0.15263712370972,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Colombia,0.288127281217045,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Colombia,0.581435745397585,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Colombia,4.31862907951802e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Colombia,8.72506825901856e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Ecuador,0.423991539131491,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Ecuador,0.388906065890223,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Ecuador,8.46757279436383e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Ecuador,0.102426667034651,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,French Guiana,0.416020387189915,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,French Guiana,0.465057679054084,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,French Guiana,3.65449450086693e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,French Guiana,8.2376988747332e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Guyana,0.543075863532749,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Guyana,0.221364830734608,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Guyana,1.35770039973485e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Guyana,0.221982301735295,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Paraguay,0.299813434086659,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Paraguay,0.552282318490552,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Paraguay,7.1078608324282e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Paraguay,7.68256390985058e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Peru,0.397514601167344,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Peru,0.365796755217199,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Peru,0.147711720298303,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Peru,8.89769233171531e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Suriname,0.500015245155118,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Suriname,0.320915419719372,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Suriname,3.35111847279008e-03,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Suriname,0.175718216652717,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Uruguay,0.324056995374018,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Uruguay,0.540778161651419,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Uruguay,4.59940220107594e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Uruguay,8.91708209638029e-02,Wanting to avoid pregnancy,Unmet need,Using no method
+Latin America and the Caribbean,South America,Venezuela,0.319888336099567,Not wanting to avoid pregancy,Not applicable,Not applicable
+Latin America and the Caribbean,South America,Venezuela,0.540280071668575,Wanting to avoid pregnancy,Met need,Using modern methods
+Latin America and the Caribbean,South America,Venezuela,4.60021336146931e-02,Wanting to avoid pregnancy,Unmet need,Using traditional methods
+Latin America and the Caribbean,South America,Venezuela,9.38294586171654e-02,Wanting to avoid pregnancy,Unmet need,Using no method
