@@ -1,0 +1,307 @@
+---
+jupyter: ir
+---
+
+```{r}
+#| vscode: {languageId: r}
+df = read.csv('data_final.csv')
+print(head(df))
+```
+
+```{r}
+#| vscode: {languageId: r}
+summary(df)
+```
+
+```{r}
+#| vscode: {languageId: r}
+unique_region <- unique(df$WHO.Region)
+print(unique_region)
+```
+
+```{r}
+#| vscode: {languageId: r}
+unique_iso <- unique(df$ISO3)
+print(unique_iso)
+```
+
+```{r}
+#| vscode: {languageId: r}
+unique_country <- unique(df$WHO.Country.Name)
+print(unique_country)
+```
+
+Average.NO2 is Average NO2 for country
+
+2010, 2014 to 2019
+
+
+```{r}
+#| vscode: {languageId: r}
+library(dplyr)
+
+# Balancing data choosing countries with data for years 2010, 2016, 2017, and 2018
+years_to_keep <- c(2010, 2016, 2017, 2018)
+
+# balanced data
+years_to_keep <- c(2010, 2014, 2015, 2016, 2017, 2018)
+
+# Filter the data frame
+filtered_df <- df %>%
+  group_by(WHO.Country.Name) %>%
+  filter(all(years_to_keep %in% Measurement.Year))
+
+# Display the filtered data frame
+print(head(filtered_df))
+```
+
+```{r}
+#| vscode: {languageId: r}
+library(ggplot2)
+print(names(df))
+
+#hist(df$NO2....g.m3.)
+
+df %>%
+  ggplot( aes(x = WHO.Region, y = NO2..μg.m3., fill=WHO.Region)) +
+  geom_boxplot() +ggtitle("Comparison of NO2 between WHO Region")
+
+hist(df$Population)
+
+hist(df$NO2.temporal.coverage....)
+
+```
+
+```{r}
+#| vscode: {languageId: r}
+
+df1 <- subset(df, select=c(Measurement.Year, WHO.Country.Name))
+
+df2 <- df1[order(df1$Measurement.Year), ]
+df2
+
+table <- table(df1)
+
+# Create a new data frame with counts for each combination of Year and Country
+count_df <- df1 %>%
+  group_by(Measurement.Year, WHO.Country.Name) %>%
+  summarize(Frequency = n())
+
+# Display the resulting data frame
+print(count_df)
+
+count_df[count_df$WHO.Country.Name=="Korea",]
+```
+
+
+```{r}
+
+df_region <- subset(df, select=c(Measurement.Year, WHO.Region))
+
+
+# Create a new data frame with counts for each combination of Year and Country
+df_region <- df_region %>%
+  group_by(Measurement.Year, WHO.Region) %>%
+  summarize(Frequency = n())
+
+# Display the resulting data frame
+print(df_region)
+```
+
+
+
+EUR vs. SEA
+
+```{r}
+
+
+sea <- subset(df, select=NO2..μg.m3.,
+                      subset=WHO.Region=="South East Asia Region", drop=T)
+
+eur  <- subset(df, select=NO2..μg.m3.,
+                      subset=WHO.Region=="European Region", drop=T)
+
+t.test(sea, eur, alt="greater")
+
+```
+
+EUR vs. SEA in 2019
+
+```{r}
+
+df2019 <- df[df$Measurement.Year==2019, ]
+
+sea2 <- subset(df2019, select=NO2..μg.m3.,
+                      subset=WHO.Region=="South East Asia Region", drop=T)
+
+eur2  <- subset(df2019, select=NO2..μg.m3.,
+                      subset=WHO.Region=="European Region", drop=T)
+
+t.test(sea2, eur2, alt="greater")
+
+```
+
+Perform a bootstrap test for ratio of means of “NO2”, Find the 95% bootstrap percentile interval for the ratio of means and write your conclusion.
+
+```{r}
+sea3 <- df[df$WHO.Region == "South East Asia Region", ]
+eur3 <- df[df$WHO.Region == "European Region", ]
+N <- 100000
+
+ratiomeans<- numeric(N)
+
+for (i in 1:N)
+{
+  sea_sample <- sample(df$NO2..μg.m3.[df$WHO.Region == 'South East Asia Region'], length(sea3), replace = TRUE)
+  eur_sample <- sample(df$NO2..μg.m3.[df$WHO.Region == 'European Region'], length(eur3), replace = TRUE)
+  ratiomeans[i] <- mean(sea_sample)/mean(eur_sample)
+}
+
+quantile(ratiomeans, c(0.025, 0.975))
+```
+
+
+
+"An annual average indoor nitrogen dioxide guideline of 40 μg/m3, consistent with the existing WHO air quality guideline, is recommended."
+https://www.ncbi.nlm.nih.gov/books/NBK138707/
+
+
+```{r}
+df$WHO.Guideline <- ifelse(df$NO2..μg.m3. >= 41.0, "above", "within")
+print(head(df))
+
+df_region_chi <- df[!is.na(df$WHO.Region) & !is.na(df$WHO.Guideline),]
+
+tableRegion <- table(df$WHO.Region, df$WHO.Guideline)
+tableRegion
+
+chisq.test(tableRegion)
+
+```
+
+```{r}
+
+germany1 <- subset(df, select=NO2..μg.m3.,
+                      subset=WHO.Country.Name=="Germany", drop=T)
+
+france1  <- subset(df, select=NO2..μg.m3.,
+                      subset=WHO.Country.Name=="France", drop=T)
+
+t.test(germany1, france1, alt="greater")
+
+```
+```{r}
+df2010 <- df[df$Measurement.Year==2010, ]
+
+germany2 <- subset(df2010, select=NO2..μg.m3.,
+                      subset=WHO.Country.Name=="Germany", drop=T)
+
+france2  <- subset(df2010, select=NO2..μg.m3.,
+                      subset=WHO.Country.Name=="France", drop=T)
+
+t.test(france2, germany2, alt="less")
+```
+
+
+
+```{r}
+
+germany3 <- subset(df, select=Population,
+                      subset=WHO.Country.Name=="Germany", drop=T)
+
+france3  <- subset(df, select=Population,
+                      subset=WHO.Country.Name=="France", drop=T)
+
+t.test(germany3, france3, alt="greater")
+
+```
+
+```{r}
+
+df_germany <- df[df$WHO.Country.Name=="Germany", ]
+
+germany2016 <- subset(df_germany, select=NO2..μg.m3.,
+                      subset=Measurement.Year=="2016", drop=T)
+
+germany2018  <- subset(df_germany, select=NO2..μg.m3.,
+                      subset=Measurement.Year=="2018", drop=T)
+
+t.test(germany2018, germany2016, alt="less")
+
+
+```
+
+```{r}
+
+df_france <- df[df$WHO.Country.Name=="France", ]
+
+france2010 <- subset(df_france, select=NO2..μg.m3.,
+                      subset=Measurement.Year=="2010", drop=T)
+
+france2016  <- subset(df_france, select=NO2..μg.m3.,
+                      subset=Measurement.Year=="2016", drop=T)
+
+t.test(france2016, france2010, alt="less")
+
+
+```
+
+```{r}
+
+germany2013 <- subset(df_germany, select=NO2..μg.m3.,
+                      subset=Measurement.Year=="2013", drop=T)
+
+germany2019  <- subset(df_germany, select=NO2..μg.m3.,
+                      subset=Measurement.Year=="2019", drop=T)
+
+t.test(germany2019, germany2013, alt="less")
+```
+
+```{r}
+
+
+df_india <- df[df$WHO.Country.Name=="India", ]
+
+india2014 <- subset(df_germany, select=NO2..μg.m3.,
+                      subset=Measurement.Year=="2014", drop=T)
+
+india2018  <- subset(df_germany, select=NO2..μg.m3.,
+                      subset=Measurement.Year=="2018", drop=T)
+
+t.test(india2018, india2014, alt="less")
+
+
+```
+
+Is global NO2 dependent on Year?
+
+
+```{r}
+
+df_global <- df[(df$Measurement.Year>=2013 & df$Measurement.Year<=2019),]
+
+#df_year_chi <- df_global[!is.na(df_global$Measurement.Year) & !is.na(df_global$WHO.Guideline),]
+
+table_year<- table(df_global$Measurement.Year, df_global$WHO.Guideline)
+table_year
+
+chisq.test(table_year)
+
+```
+
+
+```{r}
+
+df_global2 <- df_global[df_global$WHO.Country.Name=="India" | df_global$WHO.Country.Name=="Germany" | df_global$WHO.Country.Name=="France", ]
+
+df_global2 <- df_global2[(df_global2$Measurement.Year>=2013 & df_global2$Measurement.Year<=2019),]
+
+#df_year_chi <- df_global[!is.na(df_global$Measurement.Year) & !is.na(df_global$WHO.Guideline),]
+
+table_year2 <- table(df_global2$Measurement.Year, df_global2$WHO.Guideline)
+table_year2
+
+chisq.test(table_year2)
+
+```
+
