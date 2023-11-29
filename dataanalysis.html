@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>dataanalysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="dataanalysis_files/libs/clipboard/clipboard.min.js"></script>
+<script src="dataanalysis_files/libs/quarto-html/quarto.js"></script>
+<script src="dataanalysis_files/libs/quarto-html/popper.min.js"></script>
+<script src="dataanalysis_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="dataanalysis_files/libs/quarto-html/anchor.min.js"></script>
+<link href="dataanalysis_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="dataanalysis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="dataanalysis_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="dataanalysis_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="dataanalysis_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Does South East Asia Region have more NO2 emissions than the European Region in 2019?</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">'data_final.csv'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">head</span>(df))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  X      WHO.Region ISO3 WHO.Country.Name   City.or.Locality Measurement.Year
+1 0 European Region  ALB          Albania            Elbasan             2015
+2 1 European Region  ALB          Albania            Elbasan             2016
+3 2 European Region  AND          Andorra Escaldes-Engordany             2012
+4 3 European Region  AND          Andorra Escaldes-Engordany             2014
+5 4 European Region  AND          Andorra Escaldes-Engordany             2015
+6 5 European Region  AND          Andorra Escaldes-Engordany             2016
+  NO2..μg.m3. NO2.temporal.coverage.... Population Average.NO2
+1       23.96                  97.85388    2880703       23.96
+2       26.26                  96.04964    2876101       26.26
+3       31.64                 100.00000      71013       31.64
+4       27.62                 100.00000      71621       27.62
+5       26.65                  94.55479      71746       26.65
+6       26.98                  94.96812      72540       26.98</code></pre>
+</div>
+</div>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>       X          WHO.Region            ISO3           WHO.Country.Name  
+ Min.   :    0   Length:16364       Length:16364       Length:16364      
+ 1st Qu.: 4091   Class :character   Class :character   Class :character  
+ Median : 8182   Mode  :character   Mode  :character   Mode  :character  
+ Mean   : 8182                                                           
+ 3rd Qu.:12272                                                           
+ Max.   :16363                                                           
+ City.or.Locality   Measurement.Year  NO2..μg.m3.    NO2.temporal.coverage....
+ Length:16364       Min.   :2010     Min.   : 0.00   Min.   : 90.01           
+ Class :character   1st Qu.:2014     1st Qu.:11.86   1st Qu.: 94.93           
+ Mode  :character   Median :2016     Median :18.50   Median : 97.35           
+                    Mean   :2016     Mean   :20.12   Mean   : 96.80           
+                    3rd Qu.:2018     3rd Qu.:26.71   3rd Qu.: 99.13           
+                    Max.   :2021     Max.   :89.77   Max.   :100.00           
+   Population         Average.NO2   
+ Min.   :3.703e+04   Min.   : 1.08  
+ 1st Qu.:1.959e+07   1st Qu.:16.99  
+ Median :5.973e+07   Median :20.02  
+ Mean   :1.434e+08   Mean   :20.12  
+ 3rd Qu.:6.716e+07   3rd Qu.:23.06  
+ Max.   :1.383e+09   Max.   :59.82  </code></pre>
+</div>
+</div>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>unique_region <span class="ot">&lt;-</span> <span class="fu">unique</span>(df<span class="sc">$</span>WHO.Region)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(unique_region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "European Region"              "Region of the Americas"      
+[3] "Western Pacific Region"       "South East Asia Region"      
+[5] "Eastern Mediterranean Region"</code></pre>
+</div>
+</div>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>unique_iso <span class="ot">&lt;-</span> <span class="fu">unique</span>(df<span class="sc">$</span>ISO3)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(unique_iso)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "ALB" "AND" "ARG" "AUS" "AUT" "BEL" "BGD" "BGR" "BIH" "BRA" "CAN" "CHE"
+[13] "CHL" "COL" "CRI" "CYP" "CZE" "DEU" "DNK" "ESP" "EST" "FIN" "FRA" "GBR"
+[25] "GRC" "HRV" "HUN" "IND" "IRL" "ISL" "ITA" "JOR" "JPN" "KWT" "LTU" "LUX"
+[37] "LVA" "MCO" "MEX" "MKD" "MLT" "MMR" "MNE" "NLD" "NOR" "POL" "PRT" "QAT"
+[49] "ROU" "SGP" "SRB" "SVN" "SWE" "THA"</code></pre>
+</div>
+</div>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>unique_country <span class="ot">&lt;-</span> <span class="fu">unique</span>(df<span class="sc">$</span>WHO.Country.Name)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(unique_country)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Albania"                "Andorra"                "Argentina"             
+ [4] "Australia"              "Austria"                "Belgium"               
+ [7] "Bangladesh"             "Bulgaria"               "Bosnia and Herzegovina"
+[10] "Brazil"                 "Canada"                 "Switzerland"           
+[13] "Chile"                  "Colombia"               "Costa Rica"            
+[16] "Cyprus"                 "Czechia"                "Germany"               
+[19] "Denmark"                "Spain"                  "Estonia"               
+[22] "Finland"                "France"                 "United Kingdom"        
+[25] "Greece"                 "Croatia"                "Hungary"               
+[28] "India"                  "Ireland"                "Iceland"               
+[31] "Italy"                  "Jordan"                 "Japan"                 
+[34] "Kuwait"                 "Lithuania"              "Luxembourg"            
+[37] "Latvia"                 "Monaco"                 "Mexico"                
+[40] "North Macedonia"        "Malta"                  "Myanmar"               
+[43] "Montenegro"             "Netherlands"            "Norway"                
+[46] "Poland"                 "Portugal"               "Qatar"                 
+[49] "Romania"                "Singapore"              "Serbia"                
+[52] "Slovenia"               "Sweden"                 "Thailand"              </code></pre>
+</div>
+</div>
+<p>Average.NO2 is Average NO2 for country</p>
+<p>2010, 2014 to 2019</p>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Balancing data choosing countries with data for years 2010, 2016, 2017, and 2018</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>years_to_keep <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2010</span>, <span class="dv">2016</span>, <span class="dv">2017</span>, <span class="dv">2018</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># balanced data</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>years_to_keep <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2010</span>, <span class="dv">2014</span>, <span class="dv">2015</span>, <span class="dv">2016</span>, <span class="dv">2017</span>, <span class="dv">2018</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the data frame</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>filtered_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(WHO.Country.Name) <span class="sc">%&gt;%</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">all</span>(years_to_keep <span class="sc">%in%</span> Measurement.Year))</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the filtered data frame</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">head</span>(filtered_df))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: ‘dplyr’
+
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 10
+# Groups:   WHO.Country.Name [1]
+      X WHO.Region      ISO3  WHO.Country.Name City.or.Locality Measurement.Year
+  &lt;int&gt; &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;                       &lt;int&gt;
+1    48 European Region AUT   Austria          Am Rechen                    2013
+2    49 European Region AUT   Austria          Amstetten                    2013
+3    50 European Region AUT   Austria          Bad Vöslau                   2013
+4    51 European Region AUT   Austria          Biedermannsdorf              2013
+5    52 European Region AUT   Austria          Bludenz                      2013
+6    53 European Region AUT   Austria          Bratislava                   2013
+# ℹ 4 more variables: NO2..μg.m3. &lt;dbl&gt;, NO2.temporal.coverage.... &lt;dbl&gt;,
+#   Population &lt;dbl&gt;, Average.NO2 &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">names</span>(df))</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#hist(df$NO2....g.m3.)</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x =</span> WHO.Region, <span class="at">y =</span> NO2..μg.m3., <span class="at">fill=</span>WHO.Region)) <span class="sc">+</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span><span class="fu">ggtitle</span>(<span class="st">"Comparison of NO2 between WHO Region"</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(df<span class="sc">$</span>Population)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(df<span class="sc">$</span>NO2.temporal.coverage....)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "X"                         "WHO.Region"               
+ [3] "ISO3"                      "WHO.Country.Name"         
+ [5] "City.or.Locality"          "Measurement.Year"         
+ [7] "NO2..μg.m3."               "NO2.temporal.coverage...."
+ [9] "Population"                "Average.NO2"              </code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;ce&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;bc&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;ce&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;bc&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;ce&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;bc&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;ce&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;bc&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;ce&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;bc&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;ce&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;bc&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;ce&gt;”
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;bc&gt;”
+Warning message in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;ce&gt;”
+Warning message in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+“conversion failure on 'NO2..μg.m3.' in 'mbcsToSbcs': dot substituted for &lt;bc&gt;”</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataanalysis_files/figure-html/cell-8-output-3.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataanalysis_files/figure-html/cell-8-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataanalysis_files/figure-html/cell-8-output-5.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, <span class="at">select=</span><span class="fu">c</span>(Measurement.Year, WHO.Country.Name))</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> df1[<span class="fu">order</span>(df1<span class="sc">$</span>Measurement.Year), ]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>df2</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>table <span class="ot">&lt;-</span> <span class="fu">table</span>(df1)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new data frame with counts for each combination of Year and Country</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>count_df <span class="ot">&lt;-</span> df1 <span class="sc">%&gt;%</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Measurement.Year, WHO.Country.Name) <span class="sc">%&gt;%</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Frequency =</span> <span class="fu">n</span>())</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the resulting data frame</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(count_df)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>count_df[count_df<span class="sc">$</span>WHO.Country.Name<span class="sc">==</span><span class="st">"Korea"</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A data.frame: 16364 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th" scope="col">Measurement.Year</th>
+<th data-quarto-table-cell-role="th" scope="col">WHO.Country.Name</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;int&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">779</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">780</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">781</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">782</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">783</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">784</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">785</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">786</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">787</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">788</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">789</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">790</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">791</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">792</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">793</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">794</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">795</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">796</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">797</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">798</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">799</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">800</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">801</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">802</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">803</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">804</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">805</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">806</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">807</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">808</td>
+<td>2010</td>
+<td>Austria</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16328</td>
+<td>2019</td>
+<td>Sweden</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16329</td>
+<td>2019</td>
+<td>Sweden</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16330</td>
+<td>2019</td>
+<td>Sweden</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16331</td>
+<td>2019</td>
+<td>Sweden</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16332</td>
+<td>2019</td>
+<td>Sweden</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16333</td>
+<td>2019</td>
+<td>Sweden</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16334</td>
+<td>2019</td>
+<td>Sweden</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16350</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16351</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16352</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16353</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16354</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16355</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16356</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16357</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16358</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16359</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16360</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16361</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16362</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">16363</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">16364</td>
+<td>2019</td>
+<td>Thailand</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">13985</td>
+<td>2020</td>
+<td>Kuwait</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">13986</td>
+<td>2020</td>
+<td>Kuwait</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">13987</td>
+<td>2020</td>
+<td>Kuwait</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">13988</td>
+<td>2020</td>
+<td>Kuwait</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">13989</td>
+<td>2020</td>
+<td>Kuwait</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">15772</td>
+<td>2020</td>
+<td>Qatar</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">15986</td>
+<td>2020</td>
+<td>Singapore</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">15773</td>
+<td>2021</td>
+<td>Qatar</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'Measurement.Year'. You can override using
+the `.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+# Groups:   Measurement.Year [12]
+   Measurement.Year WHO.Country.Name Frequency
+              &lt;int&gt; &lt;chr&gt;                &lt;int&gt;
+ 1             2010 Austria                103
+ 2             2010 Belgium                 41
+ 3             2010 Bulgaria                16
+ 4             2010 Croatia                  4
+ 5             2010 Cyprus                   2
+ 6             2010 Czechia                 59
+ 7             2010 Denmark                  4
+ 8             2010 Estonia                  7
+ 9             2010 Finland                 18
+10             2010 France                 304
+# ℹ 334 more rows</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A grouped_df: 0 × 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">Measurement.Year</th>
+<th data-quarto-table-cell-role="th" scope="col">WHO.Country.Name</th>
+<th data-quarto-table-cell-role="th" scope="col">Frequency</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;int&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;int&gt;</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df_region <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, <span class="at">select=</span><span class="fu">c</span>(Measurement.Year, WHO.Region))</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new data frame with counts for each combination of Year and Country</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>df_region <span class="ot">&lt;-</span> df_region <span class="sc">%&gt;%</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Measurement.Year, WHO.Region) <span class="sc">%&gt;%</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Frequency =</span> <span class="fu">n</span>())</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the resulting data frame</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(df_region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'Measurement.Year'. You can override using
+the `.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 48 × 3
+# Groups:   Measurement.Year [12]
+   Measurement.Year WHO.Region             Frequency
+              &lt;int&gt; &lt;chr&gt;                      &lt;int&gt;
+ 1             2010 European Region             1685
+ 2             2010 Region of the Americas         5
+ 3             2010 South East Asia Region        80
+ 4             2010 Western Pacific Region         1
+ 5             2011 European Region                1
+ 6             2011 Region of the Americas         7
+ 7             2011 South East Asia Region        94
+ 8             2011 Western Pacific Region         1
+ 9             2012 European Region                1
+10             2012 Region of the Americas         6
+# ℹ 38 more rows</code></pre>
+</div>
+</div>
+<p>EUR vs.&nbsp;SEA</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>sea <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Region<span class="sc">==</span><span class="st">"South East Asia Region"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>eur  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Region<span class="sc">==</span><span class="st">"European Region"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(sea, eur, <span class="at">alt=</span><span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  sea and eur
+t = 4.131, df = 1437.9, p-value = 1.91e-05
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+ 0.9076531       Inf
+sample estimates:
+mean of x mean of y 
+ 21.79245  20.28364 </code></pre>
+</div>
+</div>
+<ol type="1">
+<li>INCUDE IN FINAL PROJECT AND PRESENTATION</li>
+</ol>
+<p>Fail to reject the null hypothesis: The NO2 emissions in the South East Asia Region and European Region are similar.<br>
+Reject the null hypothesis or alternative hypothesis: The NO2 emissions in the South East Asia Region is greater than in the European Region.</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df2019 <span class="ot">&lt;-</span> df[df<span class="sc">$</span>Measurement.Year<span class="sc">==</span><span class="dv">2019</span>, ]</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>sea2 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df2019, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Region<span class="sc">==</span><span class="st">"South East Asia Region"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>eur2  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df2019, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Region<span class="sc">==</span><span class="st">"European Region"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(sea2, eur2, <span class="at">alt=</span><span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  sea2 and eur2
+t = 6.1356, df = 246.22, p-value = 1.682e-09
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+ 4.023139      Inf
+sample estimates:
+mean of x mean of y 
+ 23.53045  18.02611 </code></pre>
+</div>
+</div>
+<p>EUR vs.&nbsp;SEA in 2019 repeating test with Average NO2</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sea2 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df2019, <span class="at">select=</span>Average.NO2,</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Region<span class="sc">==</span><span class="st">"South East Asia Region"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>eur2  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df2019, <span class="at">select=</span>Average.NO2,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Region<span class="sc">==</span><span class="st">"European Region"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(sea2, eur2, <span class="at">alt=</span><span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  sea2 and eur2
+t = 50.121, df = 559.63, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+ 5.323403      Inf
+sample estimates:
+mean of x mean of y 
+ 23.53045  18.02611 </code></pre>
+</div>
+</div>
+<ol type="1">
+<li>INCLUDE IN FINAL PROJECT</li>
+</ol>
+<p>Additionally, a bootstrap test is performed for ratio of means of “NO2.” The 95% bootstrap percentile interval for the ratio of means is (0.6566061 1.7743924). The estimated bias is 0.03308387. The bootstrap tests also shows there is 95% confidence in the alternative hypothesis.</p>
+<p>Note: adjust and control for years</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>sea3 <span class="ot">&lt;-</span> df2019[df2019<span class="sc">$</span>WHO.Region <span class="sc">==</span> <span class="st">"South East Asia Region"</span>, ]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>eur3 <span class="ot">&lt;-</span> df2019[df2019<span class="sc">$</span>WHO.Region <span class="sc">==</span> <span class="st">"European Region"</span>, ]</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">100000</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>ratiomeans<span class="ot">&lt;-</span> <span class="fu">numeric</span>(N)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N)</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  sea_sample <span class="ot">&lt;-</span> <span class="fu">sample</span>(df<span class="sc">$</span>NO2..μg.m3.[df<span class="sc">$</span>WHO.Region <span class="sc">==</span> <span class="st">'South East Asia Region'</span>], <span class="fu">length</span>(sea3), <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  eur_sample <span class="ot">&lt;-</span> <span class="fu">sample</span>(df<span class="sc">$</span>NO2..μg.m3.[df<span class="sc">$</span>WHO.Region <span class="sc">==</span> <span class="st">'European Region'</span>], <span class="fu">length</span>(eur3), <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>  ratiomeans[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sea_sample)<span class="sc">/</span><span class="fu">mean</span>(eur_sample)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(ratiomeans, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class="dl-inline"><dt>2.5%</dt><dd>0.657529053899664</dd><dt>97.5%</dt><dd>1.7848090119701</dd></dl>
+</div>
+</div>
+<p>Calculate bias</p>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>sea_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(df<span class="sc">$</span>NO2..μg.m3.[df<span class="sc">$</span>WHO.Region <span class="sc">==</span> <span class="st">'South East Asia Region'</span>])</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>eur_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(df<span class="sc">$</span>NO2..μg.m3.[df<span class="sc">$</span>WHO.Region <span class="sc">==</span> <span class="st">'European Region'</span>])</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>ratio_actual <span class="ot">&lt;-</span> sea_mean<span class="sc">/</span>eur_mean</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>(<span class="at">bias=</span> <span class="fu">mean</span>(ratiomeans)<span class="sc">-</span><span class="fu">mean</span>(ratio_actual)) <span class="co">#estimated bias</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+0.0361308595682204
+</div>
+</div>
+<p>According to the existing WHO air quality guidelines, an annual average indoor nitrogen dioxide guideline of 40 μg/m3 is recommended. In the WHO dataset, a new column was added labeling NO2 above and within 40 μg/m3. Chi-squared test is performed to assess</p>
+<p>Fail to reject the null hypothesis: The compliance with recommended NO2 of regions are independent. The compliance with recommended NO2 between the regions are not different.</p>
+<p>Reject the null hypothesis or alternative hypothesis: The compliance with recommended NO2 are dependent on the region. The compliance with recommended NO2 are different between regions.</p>
+<p>“An annual average indoor nitrogen dioxide guideline of 40 μg/m3, consistent with the existing WHO air quality guideline, is recommended.” https://www.ncbi.nlm.nih.gov/books/NBK138707/</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>WHO.Guideline <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>NO2..μg.m3. <span class="sc">&gt;=</span> <span class="fl">41.0</span>, <span class="st">"above"</span>, <span class="st">"within"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">head</span>(df))</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>df_region_chi <span class="ot">&lt;-</span> df[<span class="sc">!</span><span class="fu">is.na</span>(df<span class="sc">$</span>WHO.Region) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(df<span class="sc">$</span>WHO.Guideline),]</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>tableRegion <span class="ot">&lt;-</span> <span class="fu">table</span>(df<span class="sc">$</span>WHO.Region, df<span class="sc">$</span>WHO.Guideline)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>tableRegion</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(tableRegion)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  X      WHO.Region ISO3 WHO.Country.Name   City.or.Locality Measurement.Year
+1 0 European Region  ALB          Albania            Elbasan             2015
+2 1 European Region  ALB          Albania            Elbasan             2016
+3 2 European Region  AND          Andorra Escaldes-Engordany             2012
+4 3 European Region  AND          Andorra Escaldes-Engordany             2014
+5 4 European Region  AND          Andorra Escaldes-Engordany             2015
+6 5 European Region  AND          Andorra Escaldes-Engordany             2016
+  NO2..μg.m3. NO2.temporal.coverage.... Population Average.NO2 WHO.Guideline
+1       23.96                  97.85388    2880703       23.96        within
+2       26.26                  96.04964    2876101       26.26        within
+3       31.64                 100.00000      71013       31.64        within
+4       27.62                 100.00000      71621       27.62        within
+5       26.65                  94.55479      71746       26.65        within
+6       26.98                  94.96812      72540       26.98        within</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>                              
+                               above within
+  Eastern Mediterranean Region    15     24
+  European Region                708  13548
+  Region of the Americas          11    724
+  South East Asia Region          94   1163
+  Western Pacific Region           1     76</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning message in chisq.test(tableRegion):
+“Chi-squared approximation may be incorrect”</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  tableRegion
+X-squared = 127.68, df = 4, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>germany1 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Country.Name<span class="sc">==</span><span class="st">"Germany"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>france1  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Country.Name<span class="sc">==</span><span class="st">"France"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(germany1, france1, <span class="at">alt=</span><span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  germany1 and france1
+t = 13.789, df = 4102.1, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+ 4.432918      Inf
+sample estimates:
+mean of x mean of y 
+ 24.40787  19.37438 </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>df2010 <span class="ot">&lt;-</span> df[df<span class="sc">$</span>Measurement.Year<span class="sc">==</span><span class="dv">2010</span>, ]</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>germany2 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df2010, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Country.Name<span class="sc">==</span><span class="st">"Germany"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>france2  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df2010, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Country.Name<span class="sc">==</span><span class="st">"France"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(france2, germany2, <span class="at">alt=</span><span class="st">"less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  france2 and germany2
+t = -2.5762, df = 515, p-value = 0.005133
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+     -Inf -0.93656
+sample estimates:
+mean of x mean of y 
+ 22.95500  25.55385 </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>germany3 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, <span class="at">select=</span>Population,</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Country.Name<span class="sc">==</span><span class="st">"Germany"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>france3  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, <span class="at">select=</span>Population,</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>WHO.Country.Name<span class="sc">==</span><span class="st">"France"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(germany3, france3, <span class="at">alt=</span><span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  germany3 and france3
+t = 626.53, df = 3886.2, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+ 15456597      Inf
+sample estimates:
+mean of x mean of y 
+ 82106500  66609208 </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>df_germany <span class="ot">&lt;-</span> df[df<span class="sc">$</span>WHO.Country.Name<span class="sc">==</span><span class="st">"Germany"</span>, ]</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>germany2016 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df_germany, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>Measurement.Year<span class="sc">==</span><span class="st">"2016"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>germany2018  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df_germany, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>Measurement.Year<span class="sc">==</span><span class="st">"2018"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(germany2018, germany2016, <span class="at">alt=</span><span class="st">"less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  germany2018 and germany2016
+t = -1.2248, df = 633.34, p-value = 0.1105
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+      -Inf 0.4343129
+sample estimates:
+mean of x mean of y 
+ 23.77388  25.03314 </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>df_france <span class="ot">&lt;-</span> df[df<span class="sc">$</span>WHO.Country.Name<span class="sc">==</span><span class="st">"France"</span>, ]</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>france2010 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df_france, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>Measurement.Year<span class="sc">==</span><span class="st">"2010"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>france2016  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df_france, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>Measurement.Year<span class="sc">==</span><span class="st">"2016"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(france2016, france2010, <span class="at">alt=</span><span class="st">"less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  france2016 and france2010
+t = -4.3778, df = 597.82, p-value = 7.075e-06
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+      -Inf -2.275993
+sample estimates:
+mean of x mean of y 
+ 19.30578  22.95500 </code></pre>
+</div>
+</div>
+<p>2a. INCLUDE IN FINAL PRESENTATION AND PROJECT</p>
+<section id="given-that-south-east-asian-has-greater-no2-emissions-than-europe-additional-testing-was-performed-on-france-and-india." class="level2">
+<h2 class="anchored" data-anchor-id="given-that-south-east-asian-has-greater-no2-emissions-than-europe-additional-testing-was-performed-on-france-and-india.">Given that South East Asian has greater NO2 emissions than Europe, additional testing was performed on France and India.</h2>
+</section>
+<section id="does-france-have-less-no2-emissions-in-2016-than-in-2010" class="level2">
+<h2 class="anchored" data-anchor-id="does-france-have-less-no2-emissions-in-2016-than-in-2010">Does France have less NO2 emissions in 2016 than in 2010?</h2>
+<p>A bootstrap test is performed for ratio of means of “NO2.” The 95% bootstrap percentile interval for the ratio of means is (0.6566061 1.7743924). The estimated bias is approximately 0.03. The bootstrap tests also shows there is 95% confidence in the alternative hypothesis.</p>
+<p>Yes, France has decreased their NO2 emissions in 2016.</p>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>df_france_2010 <span class="ot">&lt;-</span> df_france[df_france<span class="sc">$</span>Measurement.Year <span class="sc">==</span> <span class="st">"2010"</span>, ]</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>df_france_2016 <span class="ot">&lt;-</span> df_france[df_france<span class="sc">$</span>Measurement.Year <span class="sc">==</span> <span class="st">"2016"</span>, ]</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">100000</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>ratiomeans<span class="ot">&lt;-</span> <span class="fu">numeric</span>(N)</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N)</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>  fr_sample_2010 <span class="ot">&lt;-</span> <span class="fu">sample</span>(df_france_2010<span class="sc">$</span>NO2..μg.m3.[df_france_2010<span class="sc">$</span>Measurement.Year <span class="sc">==</span> <span class="st">'2010'</span>], <span class="fu">length</span>(df_france_2010), <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>  fr_sample_2016 <span class="ot">&lt;-</span> <span class="fu">sample</span>(df_france_2016<span class="sc">$</span>NO2..μg.m3.[df_france_2016<span class="sc">$</span>Measurement.Year <span class="sc">==</span> <span class="st">'2016'</span>], <span class="fu">length</span>(df_france_2016), <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>  ratiomeans[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(fr_sample_2010)<span class="sc">/</span><span class="fu">mean</span>(fr_sample_2016)</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(ratiomeans, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a>fr_mean_2010 <span class="ot">&lt;-</span> <span class="fu">mean</span>(df_france_2010<span class="sc">$</span>NO2..μg.m3.[df_france_2010<span class="sc">$</span>Measurement.Year <span class="sc">==</span> <span class="st">'2010'</span>])</span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a>fr_mean_2016 <span class="ot">&lt;-</span> <span class="fu">mean</span>(df_france_2016<span class="sc">$</span>NO2..μg.m3.[df_france_2016<span class="sc">$</span>Measurement.Year <span class="sc">==</span> <span class="st">'2016'</span>])</span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a>ratio_actual <span class="ot">&lt;-</span> fr_mean_2010<span class="sc">/</span>fr_mean_2016</span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a>bias<span class="ot">=</span> <span class="fu">mean</span>(ratiomeans)<span class="sc">-</span><span class="fu">mean</span>(ratio_actual) <span class="co">#estimated bias</span></span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The estimated bias is"</span>, bias))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class="dl-inline"><dt>2.5%</dt><dd>0.798775430997261</dd><dt>97.5%</dt><dd>1.80244540688004</dd></dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "The estimated bias is 0.02926019313113"</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>germany2013 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df_germany, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>Measurement.Year<span class="sc">==</span><span class="st">"2013"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>germany2019  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df_germany, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>Measurement.Year<span class="sc">==</span><span class="st">"2019"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(germany2019, germany2013, <span class="at">alt=</span><span class="st">"less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  germany2019 and germany2013
+t = -6.4465, df = 300.88, p-value = 2.273e-10
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+      -Inf -6.066074
+sample estimates:
+mean of x mean of y 
+ 21.66151  29.81421 </code></pre>
+</div>
+</div>
+<p>2b. INCLUDE IN FINAL PROJECT AND PRESENTATION ## Does India have less NO2 emissions in 2018 than in 2014? After performing a t-test, the p-value was slightly greater than 0.05, which fails to reject the null hypothesis.</p>
+<p>India did not decrease NO2 emissions in 2018.</p>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>df_india <span class="ot">&lt;-</span> df[df<span class="sc">$</span>WHO.Country.Name<span class="sc">==</span><span class="st">"India"</span>, ]</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>india2014 <span class="ot">&lt;-</span> <span class="fu">subset</span>(df_germany, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>Measurement.Year<span class="sc">==</span><span class="st">"2014"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>india2018  <span class="ot">&lt;-</span> <span class="fu">subset</span>(df_germany, <span class="at">select=</span>NO2..μg.m3.,</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">subset=</span>Measurement.Year<span class="sc">==</span><span class="st">"2018"</span>, <span class="at">drop=</span>T)</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(india2018, india2014, <span class="at">alt=</span><span class="st">"less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  india2018 and india2014
+t = -1.5742, df = 630.54, p-value = 0.05797
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+       -Inf 0.07603958
+sample estimates:
+mean of x mean of y 
+ 23.77388  25.41283 </code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li>INCLUDE IN PRESENTATION</li>
+</ol>
+</section>
+<section id="is-global-no2-dependent-on-year" class="level2">
+<h2 class="anchored" data-anchor-id="is-global-no2-dependent-on-year">Is global NO2 dependent on Year?</h2>
+<p>According to the existing WHO air quality guidelines, an annual average indoor nitrogen dioxide guideline of 40 μg/m3 is recommended. In the WHO dataset, a new column was added labeling NO2 above and within 40 μg/m3. Chi-squared test is performed to assess if compliance with recommended NO2 is dependent on year in the subset.</p>
+<p>Fail to reject the null hypothesis: The compliance with recommended NO2 are independent from years. The compliance with recommended NO2 does not differ between years.</p>
+<p>Reject the null hypothesis or alternative hypothesis: The compliance with recommended NO2 are dependent on the year. The compliance with recommended NO2 differs between the years.</p>
+<p>The Chi-squared test result in p-value &lt; 2.2e-16, confirming the alternative hypothesis. Therefore, compliance with recommended NO2 differs between the years.</p>
+<p>“An annual average indoor nitrogen dioxide guideline of 40 μg/m3, consistent with the existing WHO air quality guideline, is recommended.” https://www.ncbi.nlm.nih.gov/books/NBK138707/</p>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>df_global <span class="ot">&lt;-</span> df[(df<span class="sc">$</span>Measurement.Year<span class="sc">&gt;=</span><span class="dv">2013</span> <span class="sc">&amp;</span> df<span class="sc">$</span>Measurement.Year<span class="sc">&lt;=</span><span class="dv">2019</span>),]</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>table_year<span class="ot">&lt;-</span> <span class="fu">table</span>(df_global<span class="sc">$</span>Measurement.Year, df_global<span class="sc">$</span>WHO.Guideline)</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>table_year</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(table_year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>      
+       above within
+  2013   119   1347
+  2014   111   1520
+  2015   103   1869
+  2016   118   2056
+  2017   104   2149
+  2018    91   2317
+  2019    53   2409</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  table_year
+X-squared = 94.367, df = 6, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>To take a closer look a subset was limited to India, Germany, and France in between the date range of 2013 to 2019.</p>
+<p>According to the existing WHO air quality guidelines, an annual average indoor nitrogen dioxide guideline of 40 μg/m3 is recommended. In the WHO dataset, a new column was added labeling NO2 above and within 40 μg/m3. Chi-squared test is performed to assess if compliance with recommended NO2 is dependent on year in the subset.</p>
+<p>Fail to reject the null hypothesis: The compliance with recommended NO2 are independent from years. The compliance with recommended NO2 does not differ between years.</p>
+<p>Reject the null hypothesis or alternative hypothesis: The compliance with recommended NO2 are dependent on the year. The compliance with recommended NO2 differs between the years.</p>
+<p>“An annual average indoor nitrogen dioxide guideline of 40 μg/m3, consistent with the existing WHO air quality guideline, is recommended.” https://www.ncbi.nlm.nih.gov/books/NBK138707/</p>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>df_global2 <span class="ot">&lt;-</span> df_global[df_global<span class="sc">$</span>WHO.Country.Name<span class="sc">==</span><span class="st">"India"</span> <span class="sc">|</span> df_global<span class="sc">$</span>WHO.Country.Name<span class="sc">==</span><span class="st">"Germany"</span> <span class="sc">|</span> df_global<span class="sc">$</span>WHO.Country.Name<span class="sc">==</span><span class="st">"France"</span>, ]</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>df_global2 <span class="ot">&lt;-</span> df_global2[(df_global2<span class="sc">$</span>Measurement.Year<span class="sc">&gt;=</span><span class="dv">2013</span> <span class="sc">&amp;</span> df_global2<span class="sc">$</span>Measurement.Year<span class="sc">&lt;=</span><span class="dv">2019</span>),]</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>table_year2 <span class="ot">&lt;-</span> <span class="fu">table</span>(df_global2<span class="sc">$</span>Measurement.Year, df_global2<span class="sc">$</span>WHO.Guideline)</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>table_year2</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(table_year2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>      
+       above within
+  2013    58    243
+  2014    74    381
+  2015    48    550
+  2016    71    669
+  2017    58    705
+  2018    56    742
+  2019    34    787</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  table_year2
+X-squared = 99.209, df = 6, p-value &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

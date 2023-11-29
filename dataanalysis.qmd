@@ -125,7 +125,13 @@ t.test(sea, eur, alt="greater")
 
 ```
 
-EUR vs. SEA in 2019
+1. INCUDE IN FINAL PROJECT AND PRESENTATION
+
+## Does South East Asia Region have more NO2 emissions than the European Region in 2019?
+
+Fail to reject the null hypothesis: The NO2 emissions in the South East Asia Region and European Region are similar.   
+Reject the null hypothesis or alternative hypothesis: The NO2 emissions in the South East Asia Region is greater than in the European Region.  
+
 
 ```{r}
 
@@ -141,11 +147,29 @@ t.test(sea2, eur2, alt="greater")
 
 ```
 
-Perform a bootstrap test for ratio of means of “NO2”, Find the 95% bootstrap percentile interval for the ratio of means and write your conclusion.
+EUR vs. SEA in 2019
+repeating test with Average NO2
+
 
 ```{r}
-sea3 <- df[df$WHO.Region == "South East Asia Region", ]
-eur3 <- df[df$WHO.Region == "European Region", ]
+sea2 <- subset(df2019, select=Average.NO2,
+                      subset=WHO.Region=="South East Asia Region", drop=T)
+
+eur2  <- subset(df2019, select=Average.NO2,
+                      subset=WHO.Region=="European Region", drop=T)
+
+t.test(sea2, eur2, alt="greater")
+```
+
+1. INCLUDE IN FINAL PROJECT 
+
+Additionally, a bootstrap test is performed for ratio of means of “NO2.” The 95% bootstrap percentile interval for the ratio of means is (0.6566061 1.7743924). The estimated bias is 0.03308387. The bootstrap tests also shows there is 95% confidence in the alternative hypothesis.
+
+Note: adjust and control for years
+
+```{r}
+sea3 <- df2019[df2019$WHO.Region == "South East Asia Region", ]
+eur3 <- df2019[df2019$WHO.Region == "European Region", ]
 N <- 100000
 
 ratiomeans<- numeric(N)
@@ -160,7 +184,20 @@ for (i in 1:N)
 quantile(ratiomeans, c(0.025, 0.975))
 ```
 
+Calculate bias
+```{r}
+sea_mean <- mean(df$NO2..μg.m3.[df$WHO.Region == 'South East Asia Region'])
+eur_mean <- mean(df$NO2..μg.m3.[df$WHO.Region == 'European Region'])
+ratio_actual <- sea_mean/eur_mean
+(bias= mean(ratiomeans)-mean(ratio_actual)) #estimated bias
+```
 
+
+According to the existing WHO air quality guidelines, an annual average indoor nitrogen dioxide guideline of 40 μg/m3 is recommended. In the WHO dataset, a new column was added labeling NO2 above and within 40 μg/m3. Chi-squared test is performed to assess 
+
+Fail to reject the null hypothesis: The compliance with recommended NO2 of regions are independent. The compliance with recommended NO2 between the regions are not different.
+
+Reject the null hypothesis or alternative hypothesis: The compliance with recommended NO2 are dependent on the region. The compliance with recommended NO2 are different between regions.
 
 "An annual average indoor nitrogen dioxide guideline of 40 μg/m3, consistent with the existing WHO air quality guideline, is recommended."
 https://www.ncbi.nlm.nih.gov/books/NBK138707/
@@ -179,6 +216,8 @@ chisq.test(tableRegion)
 
 ```
 
+
+
 ```{r}
 
 germany1 <- subset(df, select=NO2..μg.m3.,
@@ -190,6 +229,8 @@ france1  <- subset(df, select=NO2..μg.m3.,
 t.test(germany1, france1, alt="greater")
 
 ```
+
+
 ```{r}
 df2010 <- df[df$Measurement.Year==2010, ]
 
@@ -231,6 +272,9 @@ t.test(germany2018, germany2016, alt="less")
 
 ```
 
+
+
+
 ```{r}
 
 df_france <- df[df$WHO.Country.Name=="France", ]
@@ -245,6 +289,43 @@ t.test(france2016, france2010, alt="less")
 
 
 ```
+2a. INCLUDE IN FINAL PRESENTATION AND PROJECT
+
+## Given that South East Asian has greater NO2 emissions than Europe, additional testing was performed on France and India. 
+
+## Does France have less NO2 emissions in 2016 than in 2010? 
+
+A bootstrap test is performed for ratio of means of “NO2.” The 95% bootstrap percentile interval for the ratio of means is (0.6566061 1.7743924). The estimated bias is approximately 0.03. The bootstrap tests also shows there is 95% confidence in the alternative hypothesis.
+
+Yes, France has decreased their NO2 emissions in 2016.
+
+
+```{r}
+df_france_2010 <- df_france[df_france$Measurement.Year == "2010", ]
+df_france_2016 <- df_france[df_france$Measurement.Year == "2016", ]
+N <- 100000
+
+ratiomeans<- numeric(N)
+
+for (i in 1:N)
+{
+  fr_sample_2010 <- sample(df_france_2010$NO2..μg.m3.[df_france_2010$Measurement.Year == '2010'], length(df_france_2010), replace = TRUE)
+  fr_sample_2016 <- sample(df_france_2016$NO2..μg.m3.[df_france_2016$Measurement.Year == '2016'], length(df_france_2016), replace = TRUE)
+  ratiomeans[i] <- mean(fr_sample_2010)/mean(fr_sample_2016)
+}
+
+quantile(ratiomeans, c(0.025, 0.975))
+
+fr_mean_2010 <- mean(df_france_2010$NO2..μg.m3.[df_france_2010$Measurement.Year == '2010'])
+fr_mean_2016 <- mean(df_france_2016$NO2..μg.m3.[df_france_2016$Measurement.Year == '2016'])
+ratio_actual <- fr_mean_2010/fr_mean_2016
+bias= mean(ratiomeans)-mean(ratio_actual) #estimated bias
+
+print(paste("The estimated bias is", bias))
+```
+
+
+
 
 ```{r}
 
@@ -256,6 +337,11 @@ germany2019  <- subset(df_germany, select=NO2..μg.m3.,
 
 t.test(germany2019, germany2013, alt="less")
 ```
+
+2b. INCLUDE IN FINAL PROJECT AND PRESENTATION
+## Does India have less NO2 emissions in 2018 than in 2014? After performing a t-test, the p-value was slightly greater than 0.05, which fails to reject the null hypothesis.
+
+India did not decrease NO2 emissions in 2018.
 
 ```{r}
 
@@ -273,14 +359,25 @@ t.test(india2018, india2014, alt="less")
 
 ```
 
-Is global NO2 dependent on Year?
+3. INCLUDE IN PRESENTATION
+
+## Is global NO2 dependent on Year?
+
+According to the existing WHO air quality guidelines, an annual average indoor nitrogen dioxide guideline of 40 μg/m3 is recommended. In the WHO dataset, a new column was added labeling NO2 above and within 40 μg/m3. Chi-squared test is performed to assess if compliance with recommended NO2 is dependent on year in the subset.
+
+Fail to reject the null hypothesis: The compliance with recommended NO2 are independent from years. The compliance with recommended NO2 does not differ between years.
+
+Reject the null hypothesis or alternative hypothesis: The compliance with recommended NO2 are dependent on the year. The compliance with recommended NO2 differs between the years.
+
+The Chi-squared test result in p-value < 2.2e-16, confirming the alternative hypothesis. Therefore, compliance with recommended NO2 differs between the years. 
+
+"An annual average indoor nitrogen dioxide guideline of 40 μg/m3, consistent with the existing WHO air quality guideline, is recommended."
+https://www.ncbi.nlm.nih.gov/books/NBK138707/
 
 
 ```{r}
 
 df_global <- df[(df$Measurement.Year>=2013 & df$Measurement.Year<=2019),]
-
-#df_year_chi <- df_global[!is.na(df_global$Measurement.Year) & !is.na(df_global$WHO.Guideline),]
 
 table_year<- table(df_global$Measurement.Year, df_global$WHO.Guideline)
 table_year
@@ -289,14 +386,23 @@ chisq.test(table_year)
 
 ```
 
+To take a closer look a subset was limited to India, Germany, and France in between the date range of 2013 to 2019.
+
+According to the existing WHO air quality guidelines, an annual average indoor nitrogen dioxide guideline of 40 μg/m3 is recommended. In the WHO dataset, a new column was added labeling NO2 above and within 40 μg/m3. Chi-squared test is performed to assess if compliance with recommended NO2 is dependent on year in the subset.
+
+Fail to reject the null hypothesis: The compliance with recommended NO2 are independent from years. The compliance with recommended NO2 does not differ between years.
+
+Reject the null hypothesis or alternative hypothesis: The compliance with recommended NO2 are dependent on the year. The compliance with recommended NO2 differs between the years.
+
+"An annual average indoor nitrogen dioxide guideline of 40 μg/m3, consistent with the existing WHO air quality guideline, is recommended."
+https://www.ncbi.nlm.nih.gov/books/NBK138707/
+
 
 ```{r}
 
 df_global2 <- df_global[df_global$WHO.Country.Name=="India" | df_global$WHO.Country.Name=="Germany" | df_global$WHO.Country.Name=="France", ]
 
 df_global2 <- df_global2[(df_global2$Measurement.Year>=2013 & df_global2$Measurement.Year<=2019),]
-
-#df_year_chi <- df_global[!is.na(df_global$Measurement.Year) & !is.na(df_global$WHO.Guideline),]
 
 table_year2 <- table(df_global2$Measurement.Year, df_global2$WHO.Guideline)
 table_year2
